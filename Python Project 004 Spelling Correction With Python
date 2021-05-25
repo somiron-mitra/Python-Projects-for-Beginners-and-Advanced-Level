@@ -1,0 +1,59 @@
+# Correct Spellings with Python
+# Python Program To Correct Spellings 
+# This is one of the examples of how we use Python programming in "Machine Learning". 
+
+
+# In this project, we will see how to write a program to correct spellings with Python programming language. 
+# For this task, I will use an NLP library in Python known as TextBlob.
+
+
+# What is TextBlob?
+
+# TextBlob is a Python library for processing text data. 
+# It provides a simple API for delving into common natural language processing tasks such as tagging part of speech, 
+# extracting nominal sentences, analyzing feelings, classifying, translating, and more.
+
+
+# It provides some very useful features for Machine Learning projects like:
+
+# 1.    Noun phrase extraction
+# 2.    Part-of-speech tagging
+# 3.    Sentiment analysis
+# 4.    Classification
+# 5.    Tokenization
+# 6.    Word and phrase frequencies
+# 7.    Parsing
+# 8.    n-grams
+# 9.    Word inflexion and lemmatization
+# 10.   Spelling correction
+# 11.   Add new models or languages through extensions
+# 12.   WordNet integration
+
+
+
+# We can simply install the TextBlob library in your systems by writing a pip command; pip install textblob.
+
+
+
+# Now, we will see how to write a Python program to correct spellings:
+
+from textblob import TextBlob
+words = ["Machne", "Learnin"]
+corrected_words = []
+for i in words:
+    corrected_words.append(TextBlob(i))
+print("Wrong words :", words)
+print("Corrected Words are :")
+for i in corrected_words:
+    print(i.correct(), end=" ")
+    
+    
+# OUTPUT
+#   Wrong words : ['Machne', 'Learnin']
+#   Corrected Words are :
+#   Machine Learning 
+
+
+
+# So this is how we can write a python program using the TextBlob library for correcting spellings. 
+# This feature can be used in Natural language processing projects in Machine Learning.
